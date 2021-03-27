@@ -1,9 +1,11 @@
-COMPILER = g++-7 -std=c++17 -Wno-parentheses
+COMPILER = g++ -std=c++11 -Wno-parentheses
 CXXFLAGS = -Wall -Wno-long-long -pedantic
 TESTFLAGS = -DCPPTK_DUMP_COMMANDS -DCPPTK_DONT_EVALUATE
 INCLUDES = -I/usr/include/tcl8.6 -I/usr/include/tk8.6
+INCLUDES = -I/System/Library/Frameworks/Tcl.framework/Headers -I/System/Library/Frameworks/Tk.framework/Headers -I$(BOOST_ROOT)
 LIBDIRS =
 LIBS = -ltcl8.6 -ltk8.6
+LIBS = -ltcl8.5 -ltk8.5
 
 OTHERFILES = ../cpptk.h ../cpptkoptions.x ../cpptkconstants.x \
           ../base/cpptkbase.h ../base/cpptkbase.cc

@@ -1,8 +1,10 @@
-COMPILER = g++-6 -std=c++14 -Wno-parentheses
+COMPILER = g++ -std=c++17 -Wno-parentheses
 OPTIONS = -Wall -Wno-long-long -pedantic
 INCLUDES = -I.. -I/usr/include/tcl8.6 -I/usr/include/tk8.6
+INCLUDES = -I.. -I/System/Library/Frameworks/Tcl.framework/Headers -I/System/Library/Frameworks/Tk.framework/Headers -I$(BOOST_ROOT)
 LIBDIRS =
 LIBS = -ltcl8.6 -ltk8.6
+LIBS = -ltcl8.5 -ltk8.5
 
 ALL_OPTIONS = ${OPTIONS} ${INCLUDES} ${LIBDIRS} ${LIBS}
 
